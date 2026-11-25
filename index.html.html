@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shazia Khateeb | Computer Engineering, AI and Research</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F7FB;--panel:#fff;--tx:#0A1B2D;--mu:#51657B;--acc:#0A86B8;--acc2:#5B6CFF;--line:rgba(10,27,45,.13);--hd:rgba(243,247,251,.82);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#07111F;--panel:#0D1B2E;--tx:#E8F0F8;--mu:#93A8BE;--acc:#2BB4E8;--acc2:#8794FF;--line:rgba(160,200,235,.16);--hd:rgba(7,17,31,.78)}}
+:root[data-theme="dark"]{--bg:#07111F;--panel:#0D1B2E;--tx:#E8F0F8;--mu:#93A8BE;--acc:#2BB4E8;--acc2:#8794FF;--line:rgba(160,200,235,.16);--hd:rgba(7,17,31,.78)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 17px/1.6 Figtree,system-ui,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hd);backdrop-filter:blur(14px);z-index:49}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;margin:0;letter-spacing:-.025em}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+#bar{position:fixed;left:0;top:env(safe-area-inset-top,0px);height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--acc),var(--acc2));z-index:60}
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--hd);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;height:64px;gap:8px}
+.logo{font:700 19px Sora,sans-serif;margin-right:auto;display:flex;align-items:center;gap:10px}
+.logo i{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--acc),var(--acc2));display:grid;place-items:center;color:#fff;font:700 13px Sora;font-style:normal}
+nav a.l{padding:8px 14px;border-radius:30px;color:var(--mu);font-weight:500;font-size:15px;transition:color .2s,background .2s}
+nav a.l:hover,nav a.l.on{color:var(--tx);background:var(--line)}
+#th{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--panel);color:var(--tx);cursor:pointer;display:grid;place-items:center;margin-left:6px}
+/* hero */
+.hero{position:relative;min-height:calc(100vh - 64px);display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--line)}
+#net{position:absolute;inset:0;width:100%;height:100%}
+.hero .wrap{position:relative;padding-top:60px;padding-bottom:60px;pointer-events:none}
+.hero a,.hero button{pointer-events:auto}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;border:1px solid var(--line);border-radius:40px;background:var(--panel);font-size:14.5px;color:var(--mu)}
+.pill b{width:8px;height:8px;border-radius:50%;background:#3DDC97;box-shadow:0 0 0 0 #3DDC97;animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
+h1{font-size:clamp(46px,9.2vw,124px);line-height:1;margin:26px 0 22px;font-weight:700}
+h1 span{display:block;overflow:hidden;padding-bottom:.08em}
+h1 em{display:block;font-style:normal;transform:translateY(105%);animation:rise 1s cubic-bezier(.2,.8,.2,1) forwards}
+h1 span:nth-child(2) em{animation-delay:.14s;background:linear-gradient(95deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+@keyframes rise{to{transform:none}}
+.role{font-size:clamp(20px,2.6vw,30px);max-width:24em;min-height:2.9em;color:var(--mu);margin:0}
+.role strong{color:var(--tx);font-weight:600}
+.role u{text-decoration:none;border-right:3px solid var(--acc);padding-right:3px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{border-color:transparent}}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:40px;font:600 15.5px Figtree;border:1px solid var(--line);background:var(--panel);color:var(--tx);cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px -12px var(--acc)}
+.btn.p{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;border:0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:56px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;max-width:820px}
+.stats div{background:var(--panel);padding:20px 22px}
+.stats b{display:block;font:700 clamp(26px,3.4vw,38px) Sora;letter-spacing:-.03em}
+.stats span{font-size:14px;color:var(--mu);line-height:1.3;display:block;margin-top:4px}
+/* sections */
+section{padding:100px 0}
+.h2{margin-bottom:12px;font-size:clamp(34px,5vw,56px);font-weight:700}
+.sub{color:var(--mu);max-width:34em;margin:0 0 36px}
+/* filters + cards */
+.flt{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.flt button{padding:9px 20px;border-radius:30px;border:1px solid var(--line);background:transparent;color:var(--mu);font:500 15px Figtree;cursor:pointer;transition:.2s}
+.flt button.on{background:var(--tx);color:var(--bg);border-color:var(--tx)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px;perspective:1200px}
+.card{position:relative;padding:28px;border-radius:20px;background:var(--panel);border:1px solid var(--line);cursor:pointer;text-align:left;color:var(--tx);font:inherit;overflow:hidden;display:flex;flex-direction:column;gap:12px;transition:transform .15s ease-out,border-color .25s;animation:pop .5s both}
+@keyframes pop{from{opacity:0;transform:scale(.94)}}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(380px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--acc) 22%,transparent),transparent 60%);opacity:0;transition:opacity .3s}
+.card:hover{border-color:var(--acc)}.card:hover::before{opacity:1}
+.card>*{position:relative}
+.tag{align-self:flex-start;font-size:13.5px;font-weight:600;color:var(--acc);background:color-mix(in srgb,var(--acc) 13%,transparent);padding:4px 12px;border-radius:20px}
+.card h3{font-size:22px;line-height:1.2}
+.card p{margin:0;color:var(--mu);font-size:15.5px;line-height:1.55}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:6px}
+.chips i{font-style:normal;font-size:13px;padding:3px 11px;border:1px solid var(--line);border-radius:20px;color:var(--mu)}
+.more{font-weight:600;font-size:14.5px;color:var(--acc)}
+/* modal */
+dialog{width:min(680px,calc(100% - 32px));max-height:86vh;padding:36px;border:1px solid var(--line);border-radius:24px;background:var(--panel);color:var(--tx);overflow:auto}
+dialog::backdrop{background:rgba(3,8,16,.66);backdrop-filter:blur(6px)}
+dialog[open]{animation:pop .35s both}
+dialog h3{font-size:28px;margin:12px 0 6px;line-height:1.15}
+dialog .when{color:var(--mu);font-size:15px;margin:0 0 18px}
+dialog p{margin:0 0 14px}
+dialog .x{position:absolute;right:16px;top:16px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--tx);font-size:20px;cursor:pointer}
+dialog .chips{margin-top:18px}
+/* timeline */
+.tl{position:relative;padding-left:38px;display:grid;gap:34px}
+.tl::before,.tl::after{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.tl::after{background:linear-gradient(var(--acc),var(--acc2));transform-origin:0 0;transform:scaleY(var(--p,0))}
+.ev{position:relative;padding:26px 28px;border:1px solid var(--line);border-radius:20px;background:var(--panel)}
+.ev::before{content:"";position:absolute;left:-38px;top:32px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--acc)}
+.ev .d{font-size:14.5px;color:var(--acc);font-weight:600}
+.ev h3{font-size:22px;margin:4px 0 8px;line-height:1.2}
+.ev p{margin:0;color:var(--mu);max-width:44em;font-size:16px}
+/* stack */
+.stk{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.stk div{padding:26px;border:1px solid var(--line);border-radius:20px;background:var(--panel)}
+.stk h3{font-size:18px;margin-bottom:16px}
+.stk .chips{margin:0;padding:0}
+.stk .chips i{font-size:14px;padding:5px 13px;color:var(--tx);transition:.2s}
+.stk .chips i:hover{background:var(--acc);border-color:var(--acc);color:#fff;transform:translateY(-2px)}
+/* contact */
+.ct{padding:clamp(34px,6vw,70px);border-radius:28px;border:1px solid var(--line);background:radial-gradient(700px circle at 85% 0%,color-mix(in srgb,var(--acc2) 22%,transparent),transparent 60%),radial-gradient(600px circle at 0% 100%,color-mix(in srgb,var(--acc) 18%,transparent),transparent 60%),var(--panel)}
+.ct h2{font-size:clamp(34px,6vw,70px);max-width:12em;line-height:1.05}
+.ct p{color:var(--mu);max-width:30em;margin:18px 0 30px}
+#toast{position:fixed;left:50%;bottom:calc(28px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);opacity:0;background:var(--tx);color:var(--bg);padding:11px 22px;border-radius:30px;font-weight:600;font-size:15px;transition:.3s;z-index:90;pointer-events:none}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+footer{padding:10px 0 50px;color:var(--mu);font-size:14.5px}
+@media (max-width:760px){
+ nav a.l{display:none}section{padding:72px 0}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){h1 em{animation:none;transform:none}*{transition:none!important;scroll-behavior:auto!important}.card,dialog[open]{animation:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav><div class="wrap">
+ <a class="logo" href="#top"><i>SK</i>Shazia Khateeb</a>
+ <a class="l" href="#work">Work</a><a class="l" href="#journey">Journey</a><a class="l" href="#stack">Stack</a><a class="l" href="#contact">Contact</a>
+ <button id="th" aria-label="Switch light or dark theme">◐</button>
+</div></nav>
+
+<header class="hero" id="top">
+ <canvas id="net" aria-hidden="true"></canvas>
+ <div class="wrap">
+  <div class="pill"><b></b>Research intern at IISER</div>
+  <h1><span><em>Shazia</em></span><span><em>Khateeb</em></span></h1>
+  <p class="role">Computer engineering student building AI that <strong><u id="tw"></u></strong></p>
+  <div class="cta">
+   <a class="btn p" href="#work">See my work</a>
+   <button class="btn" id="cp1">Copy email</button>
+  </div>
+  <div class="stats">
+   <div><b data-n="8.88" data-d="2">0</b><span>CGPA out of 10</span></div>
+   <div><b data-n="98.41" data-d="2" data-s="%">0</b><span>TB detection accuracy</span></div>
+   <div><b data-n="50" data-s="k+">0</b><span>users on a SaaS I helped ship</span></div>
+   <div><b data-n="5">0</b><span>projects and papers</span></div>
+  </div>
+ </div>
+</header>
+
+<main>
+<section id="work"><div class="wrap">
+ <h2 class="h2">Selected work</h2>
+ <p class="sub">Computer vision, privacy-preserving learning and scientific software. Open any card for the full story.</p>
+ <div class="flt" id="flt"></div>
+ <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="journey"><div class="wrap">
+ <h2 class="h2">Journey</h2>
+ <p class="sub">From campus projects to a physics lab and a startup.</p>
+ <div class="tl" id="tl">
+  <div class="ev"><div class="d">Feb 2026 to present</div><h3>Research intern, IISER</h3><p>Working on tailoring quantum oscillations of a Bose-Einstein condensate of excitons as qubits. The work spans qubit modelling, quantum dynamics, condensed matter physics and scientific data analysis.</p></div>
+  <div class="ev"><div class="d">Sep 2025 to Jan 2026</div><h3>Founder’s associate, Permissionless</h3><p>Managed the macro and micro work of the company across project design, sales, marketing and business analytics. We built and shipped a complete SaaS product and passed 50,000 users in that period.</p></div>
+  <div class="ev"><div class="d">2025 and 2026</div><h3>Organizer and licensee, TEDxDYPDPU</h3><p>Planned and ran a large TEDx event, led cross-functional teams and handled curation for the 2025 and 2026 editions. Earlier roles: data manager for the Acunetix college fest (10+ events) and marketing for the Google Developer Group hackathon, where I brought in a sponsor.</p></div>
+  <div class="ev"><div class="d">2023 to 2027</div><h3>B.E. Computer Engineering</h3><p>Dr. D. Y. Patil Institute of Technology, with a CGPA of 8.88 out of 10.</p></div>
+ </div>
+</div></section>
+
+<section id="stack"><div class="wrap">
+ <h2 class="h2">Stack</h2>
+ <p class="sub">What I reach for most often.</p>
+ <div class="stk">
+  <div><h3>Languages</h3><div class="chips"><i>Python</i><i>C++</i></div></div>
+  <div><h3>Machine learning</h3><div class="chips"><i>TensorFlow</i><i>Keras</i><i>CNNs</i><i>Federated learning</i><i>Hyperparameter tuning</i></div></div>
+  <div><h3>Vision and GPU</h3><div class="chips"><i>OpenCV</i><i>InsightFace</i><i>CUDA</i><i>RTSP streams</i><i>NumPy</i></div></div>
+  <div><h3>Research</h3><div class="chips"><i>Quantum dynamics</i><i>Qubit modelling</i><i>Scientific visualisation</i><i>Statistical analysis</i></div></div>
+ </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+ <div class="ct">
+  <h2>Let’s build something worth shipping.</h2>
+  <p>Open to research collaborations, internships and interesting problems in AI and computer vision.</p>
+  <div class="cta" style="margin:0">
+   <a class="btn p" href="mailto:shaziakzameer@gmail.com">Email me</a>
+   <button class="btn" id="cp2">Copy email</button>
+   <a class="btn" href="https://www.linkedin.com/in/shazia-khateeb-54930b28b/" target="_blank" rel="noopener">LinkedIn</a>
+   <a class="btn" href="https://github.com/ShaziaKhateeb" target="_blank" rel="noopener">GitHub</a>
+  </div>
+ </div>
+</div></section>
+</main>
+<footer><div class="wrap">Shazia Zameer Khateeb, Panvel, Maharashtra</div></footer>
+
+<dialog id="dlg"><button class="x" aria-label="Close">×</button><span class="tag" id="dt"></span><h3 id="dh"></h3><p class="when" id="dw"></p><div id="db"></div><div class="chips" id="dc"></div></dialog>
+<div id="toast" role="status"></div>
+
+<script>
+(function(){
+var P=[
+{c:"vision",cl:"Computer vision",t:"GPU-accelerated attendance by CCTV",w:"Nov 2024 to Aug 2025, team of 5",s:"Live CCTV feeds identify registered people and log attendance with no manual step.",d:["A real-time face recognition and attendance system that processes live CCTV footage. The pipeline covers camera streaming, face detection, embedding generation, identity matching, attendance logging and monitoring.","InsightFace’s buffalo_l model runs with CUDA-accelerated inference, connected to Hikvision cameras over RTSP. Configurable similarity thresholds separate known and unknown people, and records are stored persistently with protection against duplicate entries on the same day."],k:["Python","InsightFace","OpenCV","CUDA","Tkinter"]},
+{c:"learning",cl:"Machine learning",t:"Federated learning with verified updates",w:"Jan to Jul 2026",s:"Clients train one shared model together without ever sending their raw data to a server.",d:["A cloud-based federated learning system where distributed clients collaboratively train a model while raw data stays local. It handles heterogeneous, non-IID data across clients and supports secure model aggregation.","The full lifecycle is implemented: local training, update transmission, central aggregation and redistribution of the global model. SHA-256 hashing verifies each client update and detects modification or corruption in transit."],k:["Federated learning","SHA-256","Non-IID data","Cloud"]},
+{c:"research",cl:"Research software",t:"Scientific data analysis and visualization system",w:"Feb to Jul 2026",s:"One Python workspace to manage, analyse, plot and export experimental data.",d:["A complete Python-based research platform for processing, analysing, visualising and interpreting experimental data in a single interface, with dataset management, numerical and statistical analysis, and publication-quality plots.","I designed the architecture, data workflows, analysis modules, visualisation engine and controls, aiming for reproducible, extensible workflows that replace a patchwork of separate tools."],k:["Python","Statistics","Interactive plotting","System design"]},
+{c:"vision",cl:"Computer vision",t:"Tuberculosis detection from chest X-rays",w:"Aug to Nov 2024, with a research paper",s:"A CNN that reaches 98.41% accuracy on chest X-ray classification.",d:["A CNN-based diagnostic model trained with supervised learning and cross-validation, with image preprocessing, augmentation and class balancing to reduce dataset bias. It reached 98.41% accuracy.","The paper, mentored by Mrs. Suvarna Patil, extends this with a virtual camera-assisted workflow for real-time image capture and automated inference, evaluated on clinical image samples from a private dataset."],k:["TensorFlow","Keras","OpenCV","CNN"]},
+{c:"vision",cl:"Computer vision",t:"Stress detection through facial emotion recognition",w:"March 2025, patent work",s:"Live CCTV video turned into continuous stress-state monitoring.",d:["A real-time system that estimates stress from facial expressions in live CCTV streams. It runs face detection, frame preprocessing and emotion classification with OpenCV and a deep learning model.","Temporal monitoring smooths unstable frame-by-frame predictions, and the model reached 81% classification accuracy. Mentored by Dr. Atul Katole."],k:["CNNs","OpenCV","RTSP","Real-time inference"]}
+];
+var $=function(s){return document.querySelector(s)},root=document.documentElement;
+/* theme */
+var th;try{th=localStorage.getItem("th")}catch(e){}
+root.dataset.theme=th||"dark";var accent;
+function col(){accent=getComputedStyle(root).getPropertyValue("--acc").trim()||"#2BB4E8"}
+$("#th").onclick=function(){root.dataset.theme=root.dataset.theme==="dark"?"light":"dark";try{localStorage.setItem("th",root.dataset.theme)}catch(e){}col()};
+col();
+/* toast + copy */
+function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("on");setTimeout(function(){t.classList.remove("on")},2200)}
+["#cp1","#cp2"].forEach(function(s){$(s).onclick=function(){var e="shaziakzameer@gmail.com";(navigator.clipboard?navigator.clipboard.writeText(e):Promise.reject()).then(function(){toast("Email copied")},function(){toast(e)})}});
+/* cards */
+var F=[["all","All"],["vision","Vision"],["learning","Learning"],["research","Research"]],dlg=$("#dlg");
+$("#flt").innerHTML=F.map(function(f,i){return '<button data-f="'+f[0]+'"'+(i?'':' class="on"')+'>'+f[1]+'</button>'}).join("");
+function render(f){
+ $("#grid").innerHTML=P.map(function(p,i){return p.c===f||f==="all"?'<button class="card" data-i="'+i+'" style="animation-delay:'+i*60+'ms"><span class="tag">'+p.cl+'</span><h3>'+p.t+'</h3><p>'+p.s+'</p><div class="chips">'+p.k.map(function(k){return"<i>"+k+"</i>"}).join("")+'</div><span class="more">Open details +</span></button>':""}).join("");
+}
+render("all");
+$("#flt").onclick=function(e){var b=e.target.closest("button");if(!b)return;document.querySelectorAll("#flt button").forEach(function(x){x.classList.toggle("on",x===b)});render(b.dataset.f)};
+$("#grid").addEventListener("pointermove",function(e){var c=e.target.closest(".card");if(!c)return;var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+ c.style.setProperty("--mx",x*100+"%");c.style.setProperty("--my",y*100+"%");
+ if(matchMedia("(hover:hover)").matches)c.style.transform="rotateX("+((.5-y)*7)+"deg) rotateY("+((x-.5)*9)+"deg) translateY(-4px)"});
+$("#grid").addEventListener("pointerout",function(e){var c=e.target.closest(".card");if(c)c.style.transform=""});
+$("#grid").onclick=function(e){var c=e.target.closest(".card");if(!c)return;var p=P[c.dataset.i];
+ $("#dt").textContent=p.cl;$("#dh").textContent=p.t;$("#dw").textContent=p.w;
+ $("#db").innerHTML=p.d.map(function(x){return"<p>"+x+"</p>"}).join("");
+ $("#dc").innerHTML=p.k.map(function(k){return"<i>"+k+"</i>"}).join("");dlg.showModal()};
+dlg.addEventListener("click",function(e){if(e.target===dlg||e.target.classList.contains("x"))dlg.close()});
+/* typewriter */
+var W=["sees: face recognition on live CCTV","protects privacy: federated learning","reads X-rays with 98% accuracy","models excitons as qubits"],wi=0,ci=0,del=false,tw=$("#tw");
+function type(){var w=W[wi];ci+=del?-1:1;tw.textContent=w.slice(0,ci);var d=del?24:55;
+ if(!del&&ci===w.length){del=true;d=1600}else if(del&&ci===0){del=false;wi=(wi+1)%W.length;d=350}setTimeout(type,d)}
+var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+if(reduce){tw.textContent=W[0]}else type();
+/* count up */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);var el=e.target,n=+el.dataset.n,d=+el.dataset.d||0,s=el.dataset.s||"",t0=performance.now();
+ (function f(t){var k=Math.min(1,(t-t0)/1400),v=n*(1-Math.pow(1-k,3));el.textContent=v.toFixed(d)+s;if(k<1&&!reduce)requestAnimationFrame(f);else el.textContent=n.toFixed(d)+s})(t0)})},{threshold:.6});
+document.querySelectorAll("[data-n]").forEach(function(e){io.observe(e)});
+/* scroll: progress bar, timeline, nav */
+var tl=$("#tl");
+function sc(){var h=root.scrollHeight-innerHeight;$("#bar").style.transform="scaleX("+(h>0?scrollY/h:0)+")";
+ var r=tl.getBoundingClientRect(),p=Math.min(1,Math.max(0,(innerHeight*.6-r.top)/r.height));tl.style.setProperty("--p",p)}
+addEventListener("scroll",sc,{passive:true});sc();
+var ls=document.querySelectorAll("nav a.l"),so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)ls.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})})},{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("main section").forEach(function(s){so.observe(s)});
+/* network canvas */
+var cv=$("#net"),cx=cv.getContext("2d"),N=[],m={x:-999,y:-999},vis=true,w,h;
+function size(){var d=Math.min(devicePixelRatio||1,2),r=cv.getBoundingClientRect();w=r.width;h=r.height;cv.width=w*d;cv.height=h*d;cx.setTransform(d,0,0,d,0,0);
+ var n=Math.round(Math.min(85,w*h/14000));N=[];for(var i=0;i<n;i++)N.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35})}
+size();addEventListener("resize",size);
+$("#top").addEventListener("pointermove",function(e){var r=cv.getBoundingClientRect();m.x=e.clientX-r.left;m.y=e.clientY-r.top});
+$("#top").addEventListener("pointerleave",function(){m.x=m.y=-999});
+new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe($("#top"));
+function draw(){
+ if(vis){cx.clearRect(0,0,w,h);cx.fillStyle=accent;cx.strokeStyle=accent;
+ for(var i=0;i<N.length;i++){var a=N[i];
+  if(!reduce){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>w)a.vx*=-1;if(a.y<0||a.y>h)a.vy*=-1;
+   var dx=m.x-a.x,dy=m.y-a.y,dm=Math.hypot(dx,dy);if(dm<160&&dm>1){a.x+=dx/dm*.6;a.y+=dy/dm*.6}}
+  cx.globalAlpha=.7;cx.beginPath();cx.arc(a.x,a.y,2,0,7);cx.fill();
+  for(var j=i+1;j<N.length;j++){var b=N[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<125){cx.globalAlpha=(1-d/125)*.4;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}
+  var q=Math.hypot(a.x-m.x,a.y-m.y);if(q<170){cx.globalAlpha=(1-q/170)*.85;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(m.x,m.y);cx.stroke()}}}
+ if(!reduce)requestAnimationFrame(draw)}
+draw();
+})();
+</script>
+</body>
+</html>
